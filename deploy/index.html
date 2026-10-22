@@ -243,7 +243,24 @@
   }
   .route-map-scroll{overflow-x:auto;}
   .route-map svg{width:100%; min-width:640px; height:auto; display:block;}
-  @media (max-width:640px){ .route-map svg{min-width:520px;} }
+  .route-list{display:none;}
+  @media (max-width:640px){
+    .route-map{display:none;}
+    .route-list{
+      display:flex; flex-direction:column;
+      border:1px solid var(--gold); border-radius:var(--radius-lg); background:var(--surface);
+      box-shadow:var(--shadow); overflow:hidden; margin-bottom:44px;
+    }
+    .route-stop{display:flex; align-items:center; gap:14px; padding:16px 18px; border-bottom:1px dashed var(--line);}
+    .route-stop:last-child{border-bottom:none;}
+    .route-stop-icon{
+      width:38px; height:38px; flex-shrink:0; border-radius:50%; background:var(--surface-2);
+      display:flex; align-items:center; justify-content:center; color:var(--jade);
+    }
+    .route-stop-icon svg{width:20px; height:20px;}
+    .route-stop b{display:block; font-family:var(--font-body); font-weight:600; font-size:1rem; color:var(--ink);}
+    .route-stop-time{font-family:var(--font-mono); font-size:0.78rem; color:var(--ink-faint);}
+  }
   .route-map-foot{
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
     padding:14px 22px; border-top:1px dashed var(--line); font-family:var(--font-mono);
@@ -703,6 +720,37 @@
         <span><span data-th="วาดเอง ไม่ตรงมาตราส่วน">Drawn, not to scale</span></span>
       </figcaption>
     </figure>
+
+    <div class="route-list">
+      <div class="route-stop">
+        <span class="route-stop-icon"><svg viewBox="0 0 48 60"><use href="#chedi-mark"/></svg></span>
+        <div><b><span data-th="เมืองเก่า">Old City</span></b><span class="route-stop-time"><span data-th="จุดเริ่ม-จุดจบ">start &amp; finish</span></span></div>
+      </div>
+      <div class="route-stop">
+        <span class="route-stop-icon"><svg viewBox="0 0 48 48"><use href="#ic-water"/></svg></span>
+        <div><b><span data-th="น้ำตกวชิรธาร">Wachirathan Falls</span></b><span class="route-stop-time"><span data-th="~1 ชม. ระหว่างทาง">~1 hr, en route</span></span></div>
+      </div>
+      <div class="route-stop">
+        <span class="route-stop-icon"><svg viewBox="0 0 48 48"><use href="#ic-peak"/></svg></span>
+        <div><b><span data-th="ดอยอินทนนท์">Doi Inthanon</span></b><span class="route-stop-time"><span data-th="~1.5–2 ชม. · 2,565 ม.">~1.5–2 hrs · 2,565 m</span></span></div>
+      </div>
+      <div class="route-stop">
+        <span class="route-stop-icon"><svg viewBox="0 0 48 48"><use href="#ic-water"/></svg></span>
+        <div><b><span data-th="น้ำตกบัวตอง">Bua Tong Falls</span></b><span class="route-stop-time"><span data-th="~1–1.5 ชม.">~1–1.5 hrs</span></span></div>
+      </div>
+      <div class="route-stop">
+        <span class="route-stop-icon"><svg viewBox="0 0 48 48"><use href="#ic-elephant"/></svg></span>
+        <div><b><span data-th="ดูแลช้าง">Elephant Care</span></b><span class="route-stop-time"><span data-th="~45 นาที">~45 min</span></span></div>
+      </div>
+      <div class="route-stop">
+        <span class="route-stop-icon"><svg viewBox="0 0 48 48"><use href="#ic-target"/></svg></span>
+        <div><b><span data-th="สนามยิงปืน">Shooting Range</span></b><span class="route-stop-time"><span data-th="~30–40 นาที">~30–40 min</span></span></div>
+      </div>
+      <div class="route-stop">
+        <span class="route-stop-icon"><svg viewBox="0 0 48 48"><use href="#ic-coffee"/></svg></span>
+        <div><b><span data-th="จุดพักกาแฟ">Coffee Stop</span></b><span class="route-stop-time"><span data-th="แวะระหว่างทาง">along the way</span></span></div>
+      </div>
+    </div>
 
     <div class="ticket-grid">
       <div class="ticket">
