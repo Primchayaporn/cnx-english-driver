@@ -205,7 +205,10 @@
   .route-map-scroll{overflow-x:auto;}
   .route-map svg{width:100%; min-width:640px; height:auto; display:block;}
   .route-list{display:none;}
-  @media (max-width:640px){ .route-map svg{min-width:0;} }
+  @media (max-width:640px){
+    .route-map svg{min-width:0;}
+    .route-map{margin-left:-20px; margin-right:-20px; border-radius:0; border-left:none; border-right:none;}
+  }
   .route-map-foot{
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
     padding:14px 22px; border-top:1px dashed var(--line); font-family:var(--font-mono);
